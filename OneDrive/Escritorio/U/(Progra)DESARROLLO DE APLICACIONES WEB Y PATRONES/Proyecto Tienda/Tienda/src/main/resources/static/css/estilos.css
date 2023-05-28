@@ -1,0 +1,58 @@
+
+/* 
+    Created on : 28 may 2023, 09:42:06
+    Author     : Andy Madrigal
+*/
+
+#encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8%;
+    width: 100%;
+    background-color: blue;
+    color: white;
+}
+
+#encabezado h1{
+    display: inline
+}
+
+#menu {
+
+    position: absolute;
+    top: 8%;
+    left: 0;
+    height: 4%;
+    width: 100%;
+    background-color: green;
+    color: red;
+}
+#menu a:hover {
+    background-color: red;
+    color: black;
+
+}
+
+#barralateral{
+    position: absolute;
+    top: 12%;
+    left: 0;
+    height: 81%;
+    width: 20%;
+    background-color: #00FFA0;
+    padding: 10px;
+
+}
+
+#piepagina{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 81%;
+    width: 20%;
+    background-color: #AABB00;
+    text-align: center
+
+
+}
