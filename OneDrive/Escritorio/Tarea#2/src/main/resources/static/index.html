@@ -5,11 +5,79 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Video Juegos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Pagina de video juegos"/>
+        <meta name="keywords" content="html5,css3,tienda,fidelitas,video juegos, consolas"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <header id="encabezado">
+            <h1 style="text-align: center">Video Juegos y Consolas</h1>
+        </header>
+
+        <nav id="menu">
+            <a href="index.html">HOME|</a>
+            <a href="componentes.html">NEXT|</a>
+            <a href="precauciones.html">BACK|</a>
+            <a href="#abajo">IR ABAJO</a><br>
+            <a name="arriba"></a>
+            <br>
+
+        </nav>
+        <section id="contenido">
+
+            <h2>Antes de empezar reconoces este sonido?</h2>
+            <figure>
+
+                <audio controls>
+                    <source src="sonidos/mario.mp3" type="audio/mpeg">
+                    Your browser does not support the <code>audio</code> tag.
+                </audio>
+
+            </figure>
+            
+            <h2>Mira este pequeño video</h2>
+            
+            <figure> 
+
+                <video width="320" height="240" controls>
+                    <source src="video/juego.mp4" type="video/mp4">
+                    Your browser does not support the <code>video</code> tag.
+                </video>
+            <figcaption> Realizado en 2023</figcaption>
+        </figure>
+
+            <div>
+                <br><br><br><br>
+                <h2>Sabias esto sobre los Video Juegos?</h2>
+                <ol>
+                    <li><p>El récord mundial en PacMan a día de hoy lo tiene Billy Mitchel, con una puntuación total de 3.333.360 puntos. Esta cifra fue obtenida sin haber perdido ni una sola vida, y alcanzando el <u>nivel número 255</u>.</p></li>
+                    <li><p>Red Dead Redemption 2 permaneció en <u>desarrollo durante 8 años</u>. Fueron necesarios 700 actores de voz, 300.000 animadores, 500 actores para captura de movimientos, 500.000 líneas de diálogo y más de 1000 desarrolladores para terminarlo.</p></li>
+                    <li><p>La razón por la que el personaje de <u>Crash no tiene cuello</u> es debido a las limitaciones técnicas de aquella época (1996). Diseñaron a Crash de esa manera para simplificarlo, restandole complejidad a su geometría.</p></li>
+                    <li><p>El videojuego que <u>mayor valor ha alcanzado en el mercado</u> a la hora de ser vendido a coleccionistas ha sido el Nintendo World Championships de 1990. Esto se debe a que en la actualidad sólo existen 116 unidades.</p></li>
+                    <li><p>Jack el Destripador fue el <u>primer videojuego de la historia</u> en ser catalogado como no apto para personas menores de 18 años. Este hecho tuvo lugar en el año 1987.</p></li>
+                </ol>
+                <img  src="imagenes/video-juegos.jpg" alt="" width="500"/>
+            </div>
+
+            <div>
+                <h2> Sabias esto sobre las consolas de video juegos</h2>
+                <ol>
+                    <li><p>La <u>Playstation 2</u> ha tenido tanto éxito y sido tan popular que Sony continuó fabricandola hasta el mes en que fue anunciada la Playstation 4</p>
+                    </li>
+                    <li><p>La fábrica en Japón que produce la Playstation solo tiene <u>4 personas trabajando</u>. El procedimiento de ensamblaje se realiza de manera automatizada en tan solo 30 segundos.</p>
+                    </li>
+                    <li><p>La consola con más ventas en la historia es la PlayStation 2 a la cabeza, con <u>155 millones de unidades</u></p>
+                    </li>
+                </ol>
+                <img src="imagenes/Consolas.jpg" alt="" width="600"/>
+            </div>
+        </section>
+
+        <a name="abajo"></a>
+        <a href="#arriba">Ir arriba</a>
+        <footer id="piepagina" style="text-align: center">Autor Andy Madrigal Abarca 2023 <address> Tel 83924250</address> </footer>
     </body>
 </html>
