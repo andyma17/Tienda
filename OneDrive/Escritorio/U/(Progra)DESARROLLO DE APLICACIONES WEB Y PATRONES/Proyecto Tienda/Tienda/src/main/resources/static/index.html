@@ -7,14 +7,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Pagina de la tienda web"/>
         <meta name="keywords" content="html5,css3,tienda,fidelitas"/>
+        <style>
+
+            .nav-link{
+                color: green;
+                text-decoration: none;
+            }
+        </style>
+
     </head>
     <body>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <header id="encabezado">
             <h1>Tienda a web</h1>
         </header>
 
         <nav id="menu">
-            <a href="index.html">HOME|</a>
+            <a href="index.html" class ="nav-link">HOME|</a>
             <a href="ejemplo2.html">NEXT|</a>
             <a href="ejemplo9.html">BACK|</a><br>
         </nav>
@@ -31,6 +40,43 @@
         </aside>
         <p style="text-align: center">Lorem ipsum dolor sit amet consectetur adipiscing elit tortor, quisque pretium ullamcorper magna litora donec odio sodales nec, mi luctus lacus dignissim accumsan sociosqu praesent. Natoque mattis congue massa bibendum curae et aenean dui sodales tristique, senectus hac ac feugiat mi dis magna pretium. Vitae nam euismod suscipit penatibus feugiat integer iaculis posuere ante, rutrum turpis sagittis aenean sociis venenatis per morbi imperdiet facilisi, aptent pulvinar maecenas quisque bibendum ullamcorper fames semper.</p>
         <p style="text-align: right">Ultricies habitant blandit ac volutpat class mi, erat dignissim natoque magnis rhoncus tempus, phasellus dictumst tristique metus morbi. Tempor vitae cum velit vivamus magna netus, neque mus nulla ligula interdum in lectus, suspendisse montes tincidunt vel est. Platea pellentesque sodales quisque bibendum cras imperdiet ultricies non maecenas, potenti ornare malesuada leo tincidunt penatibus tristique curabitur iaculis velit, nam integer sagittis et a cursus nibh eget.</p>
+        
+        
+        <figure>
+            <audio controls>
+
+                <source src="audios/musica.mp3" type="audio/mpeg">
+                Your browser does not support the <code>audio</code> tag.
+
+
+            </audio>
+        </figure>
+
+
+        <figure> 
+
+            <video controls autoplay width="320" height="240">
+                <source src="videos/torpedo.mp4" type="video/mp4">
+                Your browser does not support the <code>video</code> tag.
+            </video>
+            <figcaption> Realizado en 2023</figcaption>
+        </figure>
+
+        <iframe src="https://ameliarueda.com/" 
+                width="400" height="450"> 
+
+
+        </iframe>
+
+
+        <h1> Formulario </h1>
+        <form>
+
+            <label> Username: </label>
+            <input type="text" name="username" placeholder="UserName">
+
+        </form>
+
 
         <br>
         <h5>Prueba salto</h5>
