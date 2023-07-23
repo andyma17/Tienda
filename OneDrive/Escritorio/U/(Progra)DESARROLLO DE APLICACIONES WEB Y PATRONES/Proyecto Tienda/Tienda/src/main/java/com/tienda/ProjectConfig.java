@@ -1,22 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.tienda;
 
-/**
- *
- * @author Andy Madrigal
- */
 import java.util.Locale;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.LocaleResolver;
@@ -66,7 +61,7 @@ public class ProjectConfig implements WebMvcConfigurer {
     //configuracion de seguridad
    
 
-    /* Los siguiente métodos son para implementar el tema de seguridad dentro del proyecto */
+     //Los siguiente métodos son para implementar el tema de seguridad dentro del proyecto 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
@@ -94,6 +89,11 @@ public class ProjectConfig implements WebMvcConfigurer {
                 ).hasRole("ADMIN")
                 .requestMatchers(
                         "/producto/listado",
+                        "/producto/listado/**",
+                        "/producto/listado2",
+                        "/producto/query1",
+                        "/producto/query2",
+                        "/producto/query3",
                         "/categoria/listado",
                         "/usuario/listado"
                 ).hasAnyRole("ADMIN", "VENDEDOR")
@@ -105,9 +105,9 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .logout((logout) -> logout.permitAll());
         return http.build();
     }
-
-/* El siguiente método se utiliza para completar la clase no es 
-    realmente funcional, la próxima semana se reemplaza con usuarios de BD */    
+/*
+ El siguiente método se utiliza para completar la clase no es 
+    realmente funcional, la próxima semana se reemplaza con usuarios de BD     
     @Bean
     public UserDetailsService users() {
         UserDetails admin = User.builder()
@@ -126,5 +126,19 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .roles("USER")
                 .build();
         return new InMemoryUserDetailsManager(user, sales, admin);
+    }*/
+    
+    @Autowired
+
+    private UserDetailsService userDetailsService;
+
+
+
+    @Autowired
+
+    public void configurerGlobal(AuthenticationManagerBuilder build) throws Exception {
+
+        build.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+
     }
 }
